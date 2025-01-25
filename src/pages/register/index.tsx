@@ -42,6 +42,7 @@ const Register = () => {
                     :
                     <Button label="Create account" type="submit" disabled={status === "in_progress"}/>
                     }
+                    <p className="text-[#818e9d] text-sm font-medium">Already has account? <a href="/login" className="text-blue-500 underline">Sign in</a></p>
                     {status === "error" && <p className="text-red-500 text-sm font-medium">{errorMessage}</p>}
                     {status === "success" && <p className="text-green-500 text-sm font-medium">Account created successfully!</p>}
                 </form>

@@ -11,8 +11,8 @@ function App() {
   const [cookies] = useCookies();
 
   axiosInstance.interceptors.request.use((config) => {
-    if (cookies.auth) {
-        config.headers.Authorization = `Bearer ${cookies.auth}`;
+    if (cookies.token) {
+        config.headers.Authorization = `Bearer ${cookies.token}`;
     }
     return config;
   });
